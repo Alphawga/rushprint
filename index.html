@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+
+        extend: {
+            fontFamily: {
+                    'nunito': ['nunito', 'sans-serif'],
+                    'MyFont': ['"Stint Ultra Condensed"', 'serif'] // Ensure fonts with spaces have " " surrounding it.
+                    },
+          colors: {
+            clifford: '#da373d',
+            
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-3q0mh7N2Q0dLxTb+QGQiKjJYtOcSZtMbz20tGzBkOjKZblEhmvLHJ/dDTJGnfpexac/FMnC7p+Zqzmk82KNB8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .back{
+        background-image: url(dave.jpg);
+        object-fit:fill;
+        background-repeat: no-repeat;
+        position: left;
+        
+      }
+      .font-MyFont {
+  font-family: "Stint Ultra Condensed", serif;
+}
+    }
+  </style>
+  <title>Book Launch</title>
+</head>
+<body class=" back backdrop-blur-sm">
+    <div class="header  bg-[#6B0000] p-5">
+        <h1 class="text-white font-bold font-MyFont"> GRACE TO CONQUER</h1>
+    </div>
+  <div class=" container mx-auto pt-20 from-red-200 shadow-2xl bg-gradient-to-b h-full py-40">
+    <div class="flex flex-row md:flex-row">
+      <!-- Book Image -->
+      <div class="w-1/2 h-full md:w-1/2 md:pr-4">
+        <img src="pic.png" alt="Book Cover" class="h-[100%] w-[100%] scale-[140%] lg:pt-[70px] md:pt-[100px] pr-20 object-contain rounded-lg ">
+      </div>
+      <!-- Book Order Form -->
+      <div class="w-1/2 h-full float-right  ">
+      <div class="w-full md:w-1/2 mt-4 md:mt-0">
+        <h1 class="text-2xl font-bold mb-4">Book Launch</h1>
+        <form action="#" method="post" class="border border-black p-10 md:ml-5">
+          <!-- Quantity Input -->
+          <div class="mb-4">
+            <label for="quantity" class="block font-semibold mb-2">Quantity</label>
+            <input type="number" id="quantity" name="quantity" class="border border-gray-400 p-2 w-full" required>
+          </div>
+          <!-- Book Type Input -->
+          <div class="mb-4">
+            <label for="book-type" class="block font-semibold mb-2">Book Type</label>
+            <select id="book-type" name="book-type" class="border border-gray-400 p-2 w-full" required>
+              <option value="">Select Book Type</option>
+              <option value="paperback">Paperback</option>
+              <option value="hardcover">Hardcover</option>
+              <option value="ebook">Ebook</option>
+            </select>
+          </div>
+          <!-- Delivery Address Input -->
+          <div class="mb-4">
+            <label for="delivery-address" class="block font-semibold mb-2">Delivery Address</label>
+            <textarea id="delivery-address" name="delivery-address" rows="3" class="border border-gray-400 p-2 w-full" required></textarea>
+          </div>
+          <!-- Email Input -->
+          <div class="mb-4">
+            <label for="email" class="block ont-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="border border-gray-400 p-2 w-full" required>
+          </div>
+          <!-- Phone Input -->
+          <div class="mb-4"> 
+            <label for="phone" class="block font-semibold mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="number" class="border border-gray-400 p-2 w-full" required>
+
+          </div>
+           <button class="font-bold bg-white px-5 py-2 hover:bg-[#D9DDDC]"> Pay Now </button> 
+          
+        </form>
+        </div>
+        </div>
+        </div>
+       
+    
+</body>
+</html>
